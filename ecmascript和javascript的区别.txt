@@ -1,0 +1,2 @@
+javascript：由  ecmascript核心   BOM   和BOM三部分组成
+

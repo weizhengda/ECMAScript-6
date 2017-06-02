@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ES6</title>
+
+       <!-- 加载Traceur编译器 -->
+		<!-- <script src="http://google.github.io/traceur-compiler/bin/traceur.js"
+		        type="text/javascript"></script> -->
+		<script src="traceur.js" type="text/javascript"></script>
+
+
+		<!-- 将Traceur编译器用于网页 -->
+
+		<script>
+			
+		new traceur.WebPageTranscoder(document.location.href).run();
+
+
+		</script>
+		
+		
+		
+		<script type="module">
+	
+
+/*继承*/
+	
+// Calc计算器类
+	
+
+
+		// class Calc{
+		// 	add(a,b){
+
+		// 		return a+b;
+		// 	}
+		// 	run(){
+
+		// 		alert('执行了');
+		// 	}
+		// }
+
+		// var c=new Calc();
+
+
+		// alert(c.add(1,2));
+
+
+		// c.run();
+
+
+
+
+		// function Calc(){
+
+		// 	this.add=function(a,b){
+
+		// 		return a+b;
+		// 	}
+
+		// 	this.run=function(){
+
+		// 		alert('执行了');
+		// 	}
+		// }
+
+		//  var c=new Calc();
+
+		// alert(c.add(1,2));
+
+
+		// c.run();
+
+
+
+		// class Calc{
+		// 	add(a,b){
+
+		// 		return a+b;
+		// 	}
+		// 	run(){
+
+		// 		alert('执行了');
+		// 	}
+		// }
+
+		// var c=new Calc();
+
+
+		// alert(c.add(1,2));
+
+
+		// c.run();
+
+
+
+
+
+
+		// class Person{
+
+		// 	constructor(name,age){ 
+
+		// 	 /*构造函数  类实例化的时候就会执行，获取实例化的时候传过来的参数*/
+		// 		this._name=name;
+
+		// 		this._age=age;
+
+		// 	}
+
+		// 	print(){
+
+		// 		return this._name+'---'+this._age;
+		// 	}
+		// 	run(){
+
+		// 		alert('run方法');
+		// 	}
+
+
+		// }
+
+		// // var p=new Person('张三',20);
+
+		// // alert(p.print())
+
+		// class Web extends Person {  /*web继承 Person */
+			
+		// }
+
+		// var w=new Web();
+
+		// w.run();
+
+
+
+
+
+
+
+
+
+
+
+
+		class Person{
+
+			constructor(name,age){ 
+
+			 /*构造函数  类实例化的时候就会执行，获取实例化的时候传过来的参数*/
+				this._name=name;
+
+				this._age=age;
+
+			}
+
+			print(){
+
+				return this._name+'---'+this._age;
+			}
+			run(){
+
+				alert('run方法');
+			}
+
+
+		}
+
+		// var p=new Person('张三',20);
+
+		// alert(p.print())
+
+		class Web extends Person {  /*web继承 Person */
+			
+			constructor(name,age){ 
+				super(name,age);	  /*执行父亲的构造函数*/				
+			}
+
+		}
+
+		var w=new Web('李四',10);
+		// w.run();
+		alert(w.print());
+
+
+
+
+
+
+		</script>
+
+
+
+
+
+    </head>
+    <body>
+     
+    </body>
+</html>

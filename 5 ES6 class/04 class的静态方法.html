@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ES6</title>
+
+       <!-- 加载Traceur编译器 -->
+		<!-- <script src="http://google.github.io/traceur-compiler/bin/traceur.js"
+		        type="text/javascript"></script> -->
+		<script src="traceur.js" type="text/javascript"></script>
+	
+
+		<!-- 将Traceur编译器用于网页 -->
+		<script>			
+			new traceur.WebPageTranscoder(document.location.href).run();
+		</script>
+		
+		
+		
+		<script type="module">
+			/*类相当于实例的原型，所有在类中定义的方法，都会被实例继承。如果在一个方法前，加上static关键字，就表示该方法不会被实例继承，而是直接通过类来调用，这就称为“静态方法”。*/
+			// class Foo {
+			//   static classMethod() {
+			//     return 'hello';
+			//   }
+			// }
+			// class Bar extends Foo {
+			// }
+			// Bar.classMethod(); // 通过类来调用      'hello'
+
+			//  var b=new Bar();
+
+			 //console.log(b.classMethod()); // 报错
+			
+
+			//上面代码中，父类Foo有一个静态方法，子类Bar可以调用这个方法。静态方法也是可以从super对象上调用的。
+
+			// class Foo {
+			//   static classMethod() {
+			//     return 'hello';
+			//   }
+			// }
+			// class Bar extends Foo {
+			//   static classMethod() {
+			//     return super.classMethod() + ', too';
+			//   }
+			// }
+			// console.log(Bar.classMethod());
+
+
+
+
+
+
+//类相当于实例的原型，所有在类中定义的方法，都会被实例继承。如果在一个方法前，加上static关键字，就表示该方法不会被实例继承，而是直接通过类来调用，这就称为“静态方法”。
+
+
+
+			class A{
+			 	static add(a,b){   /*静态方法   没法被实例调用*/
+
+					alert(a+b);
+				}				
+				getData(){
+
+					alert('getData');
+				}
+			}
+			
+
+			// var a=new A();
+
+			// a.add(1,2);
+
+
+			A.add(2,3);
+
+
+
+
+
+
+		</script>
+
+    </head>
+    <body>
+     
+    </body>
+</html>

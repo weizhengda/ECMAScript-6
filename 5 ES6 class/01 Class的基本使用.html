@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ES6</title>
+
+       <!-- 加载Traceur编译器 -->
+		<!-- <script src="http://google.github.io/traceur-compiler/bin/traceur.js"
+		        type="text/javascript"></script> -->
+		<script src="traceur.js" type="text/javascript"></script>
+		<!-- 将Traceur编译器用于网页 -->
+		<script>			
+			new traceur.WebPageTranscoder(document.location.href).run();
+		</script>
+		
+			
+		
+		<script type="module">
+
+
+/*上课讲解*/			
+
+//1.new Object创建对象
+		// var obj=new Object();
+
+		// obj.name='张三';
+
+		// obj.getName=function(){
+		// 	return obj.name;
+		// }
+		// alert(obj.getName());
+
+
+
+
+
+
+
+	/*2.字面量方式创建对象*/
+		// var user={
+		// 	username:'张三',
+		// 	getName:function(){
+		// 		return this.username;
+
+		// 	}
+		// }
+		// alert(user.getName())
+
+
+
+
+	/*3.构造函数的方式创建 对象     注意：方法名称首字母大写*/
+
+
+	//  function Calc(a,b){
+	//  	this._a=a;
+	//  	this._b=b;
+	//  	this.sum=function(){
+
+	//  		return this._a+this._b;
+	//  	}
+	//  }
+
+
+	// var c=new Calc(23,14);
+	// alert(c.sum());
+
+
+
+
+
+
+//4.继承
+
+
+ 	// function Person(name,age){
+ 	// 	this._name=name;
+
+ 	// 	this._age=age;
+
+
+ 	// 	this.print=function(){
+
+ 	// 		return this._name+'---'+this._age;
+
+ 	// 	}
+
+ 	// }
+
+ 	// // var p=new Person('张三',20);
+
+ 	// // alert(p.print())
+
+
+ 	// function Web(name,age){
+
+ 	// 	Person.call(this, name,age);   /*对象冒充实现的继承*/
+ 	// }
+
+
+ 	// var w=new Web('张三11',20);
+
+ 	// alert(w.print())
+
+
+
+
+
+
+
+
+
+
+	// function Person(name,age){
+ // 		this._name=name;
+
+ // 		this._age=age;
+
+
+ // 		this.print=function(){
+
+ // 			return this._name+'---'+this._age;
+
+ // 		}
+
+ // 	}
+
+
+ // 	Person.prototype.work = function(){
+ // 		return this._name+'在工作';
+ // 	};
+
+ // 	// var p=new Person('张三',20);
+
+ // 	// alert(p.print())
+
+
+ // 	function Web(name,age){
+
+ // 		Person.call(this, name,age);   
+ // 		/*对象冒充实现的继承,对象冒充的方式没继承原型中的方法*/
+ // 	}
+
+
+ // 	var w=new Web('张三11',20);
+
+ // 	alert(w.work())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// function Person(name,age){
+ // 		this._name=name;
+
+ // 		this._age=age;
+
+
+ // 		this.print=function(){
+
+ // 			return this._name+'---'+this._age;
+
+ // 		}
+
+ // 	}
+
+
+ // 	Person.prototype.work = function(){
+ // 		return this._name+'在工作';
+ // 	};
+
+ // 	// var p=new Person('张三',20);
+
+ // 	// alert(p.print())
+
+
+ // 	function Web(name,age){
+
+ // 		Person.call(this, name,age);   
+ // 		/*对象冒充实现的继承,对象冒充的方式没继承原型中的方法*/
+ // 	}
+
+
+ // 	Web.prototype=new Person();  /*原型链实现继承*/
+
+
+ // 	var w=new Web('张三',20);
+
+ // 	alert(w.work())
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+    </head>
+    <body>
+     
+    </body>
+</html>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ES6</title>
+
+       <!-- 加载Traceur编译器 -->
+		<!-- <script src="http://google.github.io/traceur-compiler/bin/traceur.js"
+		        type="text/javascript"></script> -->
+		<script src="traceur.js" type="text/javascript"></script>
+
+
+		<!-- 将Traceur编译器用于网页 -->
+
+		<script>
+			
+		new traceur.WebPageTranscoder(document.location.href).run();
+
+
+		</script>
+		
+		
+		
+		<script type="module">
+
+		//除了属性简写，方法也可以简写。
+			// var o = {
+			//   method() {   //es6 方法的简写
+			//     return "Hello!";
+			//   }
+			// };
+			// console.log(o);
+
+
+			// // 等同于
+			// var o = {
+			//   method: function() {
+			//     return "Hello!";
+			//   }
+			// };
+			// console.log(o);
+
+
+
+			// //属性结合方法的例子
+
+
+			// var birth = '2000/01/01';
+
+			// var Person = {
+
+			//   name: '张三',
+
+			//   //等同于birth: birth
+			//   birth,
+
+			//   // 等同于hello: function ()...
+			//   hello() { console.log('我的名字是', this.name); }
+
+			// };
+
+
+
+			// //这种写法用于函数的返回值，将会非常方便。
+
+			// function getPoint() {
+			//   var x = 1;
+			//   var y = 10;
+			//   return {x, y};
+			// }
+
+			// getPoint()
+			// // {x:1, y:10}
+
+
+			/*CommonJS模块输出变量，就非常合适使用简洁写法。*/
+			
+			// var ms = {};
+
+			// function getItem (key) {
+			//   return key in ms ? ms[key] : null;
+			// }
+
+			// function setItem (key, value) {
+			//   ms[key] = value;
+			// }
+
+			// function clear () {
+			//   ms = {};
+			// }
+
+			// module.exports = { getItem, setItem, clear };
+			// // 等同于
+			// module.exports = {
+			//   getItem: getItem,
+			//   setItem: setItem,
+			//   clear: clear
+			// };
+
+
+
+
+/*上课讲解*/
+
+
+
+
+		// let name='张三222';
+		// var data={
+		// 	age:'10',
+		// 	name:name,
+		// 	getName:function(){
+
+		// 		return this.name;
+		// 	}
+		// }
+		// console.log(data.getName());
+
+
+
+		let name='张三222';
+		var data={
+			age:'10',
+			name,
+			getName(){
+
+				return this.name;
+			},
+			run(){
+				alert('run');
+			}
+		}
+		console.log(data.getName());
+
+		data.run();
+
+
+
+
+		</script>
+
+
+
+
+
+    </head>
+    <body>
+     
+    </body>
+</html>
